@@ -1,0 +1,22 @@
+﻿@model List<Cars>
+
+@if (Model != null)
+{
+
+@foreach (Cars c in Model)
+{
+<h1>@c.Id</h1>
+<h1>@c.Make</h1>
+<h1>@c.Model</h1>
+<h1>@c.Year</h1>
+<h1>@c.Color</h1>
+}
+
+}
+<form action="api/car" method="get">
+    <input type="number" name="id" />
+    <input type="submit" value="Find Car" />
+</form>
+
+
+<a href="/api/car">GET JSON</a>
